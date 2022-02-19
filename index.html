@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>WildPenas - DoWhile2021</title>
+
+  
+    
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="avatar">
+                <span>
+                    <img 
+                        src="images/build.svg" 
+                        alt="Selo Rocketseat"
+                    />
+                </span>
+                <img 
+                    src="http://lorempixel.com.br/185/185/people/" 
+                    alt="Foto Pessoal"
+                />
+            </div>
+            <h1 id="userName">Penas Nipute</h1>
+            <a 
+                href="https://github.com/penasnipute" 
+                target="_blank"
+            >
+                <img 
+                    src="images/github.svg" 
+                    alt="ícone github"
+                />
+                penasNipute
+            </a>
+
+            <p>A student focused on learning web programming and becoming a full-stack programmer</p>
+            
+            <ul id="socialLinks">
+                <li class="youtube"><a 
+                        href="https://www.youtube.com/channel/UCqsj8J4pzQhsr4vRXkRyhpw" 
+                        target="_blank"
+                    >
+                    <img 
+                        src="images/youtube.svg" 
+                        alt="ícone Youtube"
+                    />
+                </a></li>
+                <li class="facebook"><a 
+                        href="https://www.facebook.com/penasnipute" 
+                        target="_blank"
+                    >
+                    <img 
+                        src="images/facebook.svg" 
+                        alt="ícone fACEBOOK"
+                    />
+                </a></li>
+                <li class="instagram"><a 
+                    href="https://www.instagram.com/penasnipute/" 
+                    target="_blank"
+                >
+                    <img 
+                        src="images/instagram.svg" 
+                        alt="ícone Instagram"
+                    />
+                </a></li>
+                <li class="twitter"><a 
+                        href="https://twitter.com/penasnipute" 
+                        target="_blank"
+                    >
+                    <img 
+                        src="images/twitter.svg" 
+                        alt="ícone Twitter"
+                    />
+                </a></li>
+            </ul>
+        </div>
+        <!-- content -->
+    </main>
+    <!-- main -->
+    <script>
+
+        const linksSocialMedia = {
+            github : 'penasnipute',
+            instagram : 'penasnipute',
+            facebook : 'penasnipute',
+            twitter : 'penasnipute',
+            youtube : 'channel/UCqsj8J4pzQhsr4vRXkRyhpw'
+        }
+        
+        function changeSocialMedialinks(){
+            for( let li of socialLinks.children){
+                const social = li.getAttribute("class")
+                console.log(social)
+                li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+                console.log(li.children[0].href)
+            }
+        }
+
+        changeSocialMedialinks()
+    </script>  
+</body>
+</html>
