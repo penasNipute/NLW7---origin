@@ -13,6 +13,7 @@ html, body{
 }
 
 body{
+    background-color: #121214;
     display: grid;
     place-items: center;
 
