@@ -29,12 +29,16 @@ body{
 
 }
 
+
+
 main{
-    background: url(images/background.svg);
+    background: url(images/background-desk.svg);
     width: 358px;
     height: 540px;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
 
 .degrade1{
     position: absolute;
@@ -59,14 +63,6 @@ main{
 
 }
 
-main{
-    background: url(images/background-desk.svg);
-    width: 358px;
-    height: 540px;
-    position:absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 .faixa{
     position: absolute;
@@ -155,6 +151,11 @@ ul{
 
 
 @media (max-width:600px){
+
+body{
+    width: 100vw;
+    height: 100vh;
+}    
 
 .degrade1, .degrade2, .quebra, .faixa{
     display: none;
